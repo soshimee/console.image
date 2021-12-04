@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>console.image Demo by soshimee</title>
+	</head>
+	<body>
+		<input type="text" placeholder="Comma separated images">
+		<button>console.image</button>
+		<script src="console.image.min.js"></script>
+		<script>
+			document.querySelector("button").onclick = () => {
+				console.image(...document.querySelector("input").value.split(", "));
+			};
+		</script>
+	</body>
+</html>
