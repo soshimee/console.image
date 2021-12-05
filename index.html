@@ -4,12 +4,20 @@
 		<title>console.image Demo by soshimee</title>
 	</head>
 	<body>
-		<input type="text" placeholder="Comma separated images">
-		<button>console.image</button>
+		<input class="cimg_i" type="text" placeholder="Comma separated image urls">
+		<button class="cimg_b">console.image</button>
+		<input class="cvid_i" type="text" placeholder="Video url">
+		<button class="cvid_b">console.video</button>
+		<p>Don't forget to open your console</p>
+		<script src="libraries/gifshot.js"></script>
 		<script src="console.image.min.js"></script>
+		<script src="console.video.min.js"></script>
 		<script>
-			document.querySelector("button").onclick = () => {
-				console.image(...document.querySelector("input").value.split(", "));
+			document.querySelector(".cimg_b").onclick = () => {
+				console.image(...document.querySelector(".cimg_i").value.split(", "));
+			};
+			document.querySelector(".cvid_b").onclick = () => {
+				console.video(document.querySelector(".cvid_i").value, 0.1, true);
 			};
 		</script>
 	</body>
